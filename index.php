@@ -2,6 +2,6 @@
 <head>
 </head>
 <body>
-HaHAHA
+Creating a branch is quick
 </body>
 </html>
