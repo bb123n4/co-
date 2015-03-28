@@ -1,11 +1,21 @@
 <?php
 //$newFileName=$_POST[];  //set the variable name
-$newFileName="testName.html";
-
+$newFileName="testName.php";
 $htmlContent=""; 
 
-$newPage=fopen($newFileName,"w");
-fwrite($wAnswer,$htmlContent);
+$fp=fopen("userData.txt","r");
+while($data=fgets($fp))
+{
+$htmlContent=$htmlContent.$data;
+}
+fclose($fp);
 
+
+
+
+
+$newPage=fopen($newFileName,"w");
+fwrite($newPage,$htmlContent);
+fclose($newPage);
 ?>
 
